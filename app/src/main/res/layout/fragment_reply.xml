@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="replyViewModel"
+            type="com.lion.boardproject.viewmodel.ReplyViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:transitionGroup="true"
+        tools:context=".dialog.BoardReadBottomSheetFragment">
+
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewReply"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="댓글을 입력해주세요."
+            app:endIconDrawable="@drawable/arrow_upward_24px"
+            app:endIconMode="custom"
+            app:setEndIconOnClickListener="@{replyViewModel.replyFragment}"
+            app:startIconDrawable="@drawable/description_24px">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={replyViewModel.textFieldCommentText}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="rowReplyViewModel"
+            type="com.lion.boardproject.viewmodel.RowReplyViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:transitionGroup="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewRowCommentNickName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={rowReplyViewModel.textViewRowCommentNickNameText}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:id="@+id/textViewRowCommentText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={rowReplyViewModel.textViewRowCommentTextText}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <TextView
+                    android:id="@+id/textViewRowCommentDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={rowReplyViewModel.textViewRowCommentDateText}"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/buttonReplyDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/delete_24px"
+                android:onClick="@{()->rowReplyViewModel.buttonReplyDeleteOnClick()}"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

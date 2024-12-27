@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "437195695211",
+    "project_id": "lionboard-3a9eb",
+    "storage_bucket": "lionboard-3a9eb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437195695211:android:5ddc4b3924743528bd3d2e",
+        "android_client_info": {
+          "package_name": "com.lion.boardproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsrp_s0i7xQQPrPiJxEuP_IepMZza195g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
